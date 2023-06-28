@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_even import welcome_user
+from brain_even import welcome_user, know_name
 import random
 
 
@@ -18,14 +18,6 @@ def make_qwestion():
         result = num1 * num2
     return result
 
-
-def know_name():
-    name  = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
-    if name:
-        return name
 
 def game_calc():
     welcome_user()
