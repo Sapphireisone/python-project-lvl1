@@ -2,17 +2,24 @@
 import random
 
 
-def welcome():
+def welcome_user():
     print('Welcome to the Brain Games!')
+    
 
-
-def game():
-    name = ''
+def know_name():
+    name  = ''
     while name == '':
         print('May I have your name? ', end='')
         name = input()
     if name:
-        print(f'Hello, {name}!')
+        return name
+        
+    
+    
+def game():
+    welcome_user()
+    name = know_name()
+    print(f'Hello, {name}!')
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 3
     while i > 0:
@@ -36,5 +43,4 @@ def game():
         print(f'Congratulations, {name}!')
         
 if __name__ == '__main__':
-    welcome()
     game()
