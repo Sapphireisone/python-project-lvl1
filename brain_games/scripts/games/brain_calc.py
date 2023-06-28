@@ -22,6 +22,7 @@ def make_qwestion():
 def game_calc():
     welcome_user()
     name = know_name()
+    print('What is the result of the expression?')
     i = 3
     while i > 0:
         result = make_qwestion()
