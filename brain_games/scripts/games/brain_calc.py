@@ -19,14 +19,17 @@ def make_qwestion():
     return result
 
 
-def game_calc():
-    welcome_user()
+def know_name():
     name  = ''
     while name == '':
         print('May I have your name? ', end='')
         name = input()
     if name:
-        print(f'Hello, {name}!')
+        return name
+
+def game_calc():
+    welcome_user()
+    name = know_name()
     i = 3
     while i > 0:
         result = make_qwestion()
