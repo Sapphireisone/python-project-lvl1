@@ -3,34 +3,32 @@ from brain_even import welcome_user, know_name
 import random
 
 
-def make_qwestion():
-    num1 = random.randint(1, 99)
-    num2 = random.randint(1, 99)
-    print(f'Question: {num1} {num2}')
-    num = 0
-    if num1 > num2:
-        num = num2
-    else:
-        num = num1
-    i = 1
-    result = 1
-    while i <= num:
-        if num1 % i == 0 and num2 % i == 0:
-            result = i
+def find_prime():
+    num = random.randint(1, 99)
+    print(f'Question: {num}')
+    i = 2
+    res = 0
+    result = ''
+    while i < num:
+        if num % i != 0:
             i += 1
         else:
-            result
-            i += 1
+            res += 1
+            break
+    if res > 0:
+        result = 'No'
+    else:
+        result = 'Yes'
     return result
 
 
-def game_gcd():
+def game_prime():
     welcome_user()
     name = know_name()
-    print('Find the greatest common divisor of given numbers.')
+    print('What is the result of the expression?')
     i = 3
     while i > 0:
-        result = make_qwestion()
+        result = find_prime()
         answer = input('You answer: ')
         if str(answer.lower()) != str(result.lower()):
             print(f"""{answer} is wrong answer ;(. Correct answer was
@@ -44,4 +42,4 @@ def game_gcd():
 
 
 if __name__ == '__main__':
-    game_gcd()
+    game_prime()

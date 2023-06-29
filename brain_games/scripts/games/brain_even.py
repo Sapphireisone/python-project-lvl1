@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
+# from brain_games.cli import welcome_user, know_name
 import random
 
 
 def welcome_user():
     print('Welcome to the Brain Games!')
-    
+
 
 def know_name():
-    name  = ''
+    name = ''
     while name == '':
         print('May I have your name? ', end='')
         name = input()
     if name:
         return name
-        
-    
-    
-def game():
+
+
+def game_even():
     welcome_user()
     name = know_name()
     print(f'Hello, {name}!')
@@ -41,6 +41,7 @@ def game():
             i -= 1
     if i == 0:
         print(f'Congratulations, {name}!')
-        
+
+
 if __name__ == '__main__':
-    game()
+    game_even()

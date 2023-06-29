@@ -13,7 +13,7 @@ def find_element():
         element += diff
         lis.append(element)
         i += 1
-    some = random.randint(0,9)
+    some = random.randint(0, 9)
     result = lis[some]
     lis[some] = '..'
     string = ''
@@ -21,9 +21,8 @@ def find_element():
         a = str(n)
         string = string + a + ' '
     string.strip()
-    print(string)
+    print(f'Question: {string}')
     return result
-    
 
 
 def game_progression():
@@ -34,7 +33,7 @@ def game_progression():
     while i > 0:
         result = find_element()
         answer = input('You answer: ')
-        if str(answer) != str(result):
+        if str(answer.lower()) != str(result.lower()):
             print(f"""{answer} is wrong answer ;(. Correct answer was
  {result}. Let's try again, {name}!""")
             break
