@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-# from brain_games.cli import welcome_user, know_name
+# from brain_games.cli import welcome_user
 import random
 
 
 def welcome_user():
     print('Welcome to the Brain Games!')
-
-
-def know_name():
     name = ''
     while name == '':
         print('May I have your name? ', end='')
@@ -17,8 +14,7 @@ def know_name():
 
 
 def game_even():
-    welcome_user()
-    name = know_name()
+    name = welcome_user()
     print(f'Hello, {name}!')
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 3

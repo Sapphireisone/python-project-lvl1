@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_even import welcome_user, know_name
+from brain_even import welcome_user
 import random
 
 
@@ -25,8 +25,7 @@ def make_qwestion():
 
 
 def game_gcd():
-    welcome_user()
-    name = know_name()
+    name = welcome_user()
     print('Find the greatest common divisor of given numbers.')
     i = 3
     while i > 0:

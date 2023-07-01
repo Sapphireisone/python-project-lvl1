@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# from brain_games.cli import welcome_user, know_name
-from brain_even import welcome_user, know_name
+# from brain_games.cli import welcome_user
+from brain_even import welcome_user
 import random
 
 
@@ -21,8 +21,7 @@ def make_qwestion():
 
 
 def game_calc():
-    welcome_user()
-    name = know_name()
+    name = welcome_user()
     print('What is the result of the expression?')
     i = 3
     while i > 0:

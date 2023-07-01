@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-from brain_even import welcome_user, know_name
-
+from brain_even import welcome_user
 import random
 
 
@@ -26,8 +25,7 @@ def find_element():
 
 
 def game_progression():
-    welcome_user()
-    name = know_name()
+    name = welcome_user()
     print('What number is missing in the progression?')
     i = 3
     while i > 0:
