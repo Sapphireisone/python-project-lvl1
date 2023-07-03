@@ -11,7 +11,7 @@ publish:
 		poetry publish --dry-run
 
 package-install:
-		pip install --force dist/*.whl
+		python3 -m pip install --force dist/*.whl
 
 make lint:
 		poetry run flake8 brain_games

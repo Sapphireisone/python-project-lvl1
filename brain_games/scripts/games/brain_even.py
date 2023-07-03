@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user
+from brain_games.cli import welcome_user, hello_user
 import random
 
 
-def game_even():
+def main():
+    hello_user()
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 3
@@ -29,4 +30,4 @@ def game_even():
 
 
 if __name__ == '__main__':
-    game_even()
+    main()

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user
+from brain_games.cli import welcome_user, hello_user
 import random
 
 
@@ -24,7 +24,8 @@ def make_qwestion():
     return result
 
 
-def game_gcd():
+def main():
+    hello_user()
     name = welcome_user()
     print('Find the greatest common divisor of given numbers.')
     i = 3
@@ -43,4 +44,4 @@ def game_gcd():
 
 
 if __name__ == '__main__':
-    game_gcd()
+    main()

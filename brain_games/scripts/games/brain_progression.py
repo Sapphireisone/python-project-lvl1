@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user
+from brain_games.cli import welcome_user, hello_user
 import random
 
 
@@ -24,7 +24,8 @@ def find_element():
     return result
 
 
-def game_progression():
+def main():
+    hello_user()
     name = welcome_user()
     print('What number is missing in the progression?')
     i = 3
@@ -43,4 +44,4 @@ def game_progression():
 
 
 if __name__ == '__main__':
-    game_progression()
+    main()

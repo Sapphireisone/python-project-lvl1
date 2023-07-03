@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user
+from brain_games.cli import welcome_user, hello_user
 import random
 
 
@@ -22,7 +22,8 @@ def find_prime():
     return result
 
 
-def game_prime():
+def main():
+    hello_user()
     name = welcome_user()
     print('What is the result of the expression?')
     i = 3
@@ -41,4 +42,4 @@ def game_prime():
 
 
 if __name__ == '__main__':
-    game_prime()
+    main()
