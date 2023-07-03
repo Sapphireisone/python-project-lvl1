@@ -11,7 +11,7 @@ publish:
 		poetry publish --dry-run
 
 package-install:
-		pipx install --force dist/*.whl
+		pip install --force dist/*.whl
 
 make lint:
 		poetry run flake8 brain_games

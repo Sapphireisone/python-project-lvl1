@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_even import welcome_user
+from brain_games.cli import welcome_user
 import random
 
 
@@ -31,7 +31,7 @@ def game_progression():
     while i > 0:
         result = find_element()
         answer = input('You answer: ')
-        if str(answer.lower()) != str(result.lower()):
+        if str(answer) != str(result):
             print(f"""{answer} is wrong answer ;(. Correct answer was
  {result}. Let's try again, {name}!""")
             break
