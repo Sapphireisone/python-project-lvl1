@@ -2,7 +2,7 @@ install:
 		poetry install
 
 brain-games:
-		poetry run python3 brain_games/scripts/brain_games.py
+		poetry run brain-games
 
 build:
 		poetry build
