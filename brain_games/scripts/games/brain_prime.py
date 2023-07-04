@@ -19,6 +19,7 @@ def find_prime():
                 i += 1
             else:
                 res += 1
+                break
         if res > 0:
             result = 'no'
         else:
