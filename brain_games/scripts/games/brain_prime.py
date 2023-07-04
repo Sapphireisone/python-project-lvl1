@@ -31,7 +31,7 @@ def main():
     hello_user()
     name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    i = 30
+    i = 3
     while i > 0:
         result = find_prime()
         answer = input('You answer: ')
