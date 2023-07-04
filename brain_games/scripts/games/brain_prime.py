@@ -16,9 +16,9 @@ def find_prime():
             res += 1
             break
     if res > 0:
-        result = 'No'
+        result = 'no'
     else:
-        result = 'Yes'
+        result = 'yes'
     return result
 
 
