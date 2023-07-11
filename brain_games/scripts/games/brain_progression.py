@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user, hello_user
+from brain_games.engine import main
 import random
 
 
@@ -24,24 +24,8 @@ def find_element():
     return result
 
 
-def main():
-    hello_user()
-    name = welcome_user()
-    print('What number is missing in the progression?')
-    i = 3
-    while i > 0:
-        result = find_element()
-        answer = input('You answer: ')
-        if str(answer) != str(result):
-            print(f"""{answer} is wrong answer ;(. Correct answer was
- {result}. Let's try again, {name}!""")
-            break
-        else:
-            print('Correct!')
-            i -= 1
-    if i == 0:
-        print(f'Congratulations, {name}!')
+qwest = str('What number is missing in the progression?')
 
 
 if __name__ == '__main__':
-    main()
+    main(qwest, find_element())

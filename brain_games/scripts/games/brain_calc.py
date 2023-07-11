@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user
-from brain_games.cli import hello_user
+from brain_games.engine import main
 import random
 
 
@@ -20,24 +19,8 @@ def make_qwestion():
     return result
 
 
-def main():
-    hello_user()
-    name = welcome_user()
-    print('What is the result of the expression?')
-    i = 3
-    while i > 0:
-        result = make_qwestion()
-        answer = input('You answer: ')
-        if str(answer) != str(result):
-            print(f"""{answer} is wrong answer ;(. Correct answer was
- {result}. Let's try again, {name}!""")
-            break
-        else:
-            print('Correct!')
-            i -= 1
-    if i == 0:
-        print(f'Congratulations, {name}!')
+qwestion = str('What is the result of the expression?')
 
 
 if __name__ == '__main__':
-    main()
+    main(qwestion, make_qwestion())

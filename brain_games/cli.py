@@ -10,3 +10,8 @@ def welcome_user():
     if name:
         print(f'Hello, {name}!')
     return name
+
+
+def print_qwest(string):
+    print(string)
+
