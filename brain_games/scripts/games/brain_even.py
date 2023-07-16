@@ -3,7 +3,7 @@ from brain_games.engine import main
 from brain_games.scripts.scripts import even
 
 
-qwest = ('Answer "yes" if the number is even, otherwise answer "no".')
+qwest = str('Answer "yes" if the number is even, otherwise answer "no".')
 
 
 if __name__ == '__main__':

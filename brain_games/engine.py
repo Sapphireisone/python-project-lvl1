@@ -15,7 +15,7 @@ def main(qwest, func):
     print(qwest)
     i = 3
     while i > 0:
-        result = func()
+        result = func
         answer = input('You answer: ')
         if str(answer) != str(result):
             print(f"""{answer} is wrong answer ;(. Correct answer was
