@@ -1,8 +1,7 @@
 import random
 
 
-qwest_prime = str('''Answer "yes" if given number i
-s prime. Otherwise answer "no".''')
+qwest_prime = str('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
 def prime():
