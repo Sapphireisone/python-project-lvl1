@@ -1,10 +1,15 @@
-#!/usr/bin/env python3
-from brain_games.engine import main
-from brain_games.scripts.scripts import even
+import random
 
 
-qwest = str('Answer "yes" if the number is even, otherwise answer "no".')
+def even():
+    num = random.randint(1, 99)
+    print(f'Question: {num}')
+    right_answer = ''
+    if num % 2 == 0:
+        right_answer = 'yes'
+    else:
+        right_answer = 'no'
+    return right_answer
 
 
-if __name__ == '__main__':
-    main(qwest, even)
+qwest_even = 'Answer "yes" if the number is even, otherwise answer "no".'

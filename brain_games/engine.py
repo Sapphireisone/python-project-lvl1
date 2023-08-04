@@ -9,7 +9,7 @@ def welcome_user():
     return name
 
 
-def main():
+def run_game(qwest, func):
     print('Welcome to the Brain Games!')
     name = welcome_user()
     print(qwest)
