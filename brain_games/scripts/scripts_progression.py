@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 from brain_games.engine import run_game
-from brain_games.scripts.games.brain_progression import progression, qwest_prog
+from brain_games.games.brain_progression import progression, QWEST_PROGR
 
 
 def main():
-    run_game(qwest_prog, progression)
+    run_game(QWEST_PROGR, progression)
 
 
 if __name__ == '__main__':

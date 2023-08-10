@@ -1,3 +1,5 @@
 .venv/
 .vscode/
 .chat/
+dist/
+brain_games/__pycache__/

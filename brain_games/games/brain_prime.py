@@ -1,12 +1,12 @@
 import random
 
 
-qwest_prime = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+QWEST_PRIME = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def prime():
     num = random.randint(1, 99)
-    print(f'Question: {num}')
+    qwest_num = f'{num}'
     result = ''
     if num == 1:
         result = 'no'
@@ -25,4 +25,4 @@ def prime():
             result = 'no'
         else:
             result = 'yes'
-    return result
+    return qwest_num, result

@@ -1,13 +1,13 @@
 import random
 
 
-qwest_gcd = str('Find the greatest common divisor of given numbers.')
+QWEST_GCD = str('Find the greatest common divisor of given numbers.')
 
 
 def gcd():
     num1 = random.randint(1, 99)
     num2 = random.randint(1, 99)
-    print(f'Question: {num1} {num2}')
+    qwest_num = f'{num1} {num2}'
     num = 0
     if num1 > num2:
         num = num2
@@ -22,4 +22,4 @@ def gcd():
         else:
             result
             i += 1
-    return result
+    return qwest_num, result

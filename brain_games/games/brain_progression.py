@@ -1,7 +1,7 @@
 import random
 
 
-qwest_prog = str('What number is missing in the progression?')
+QWEST_PROGR = str('What number is missing in the progression?')
 
 
 def progression():
@@ -21,5 +21,5 @@ def progression():
         a = str(n)
         string = string + a + ' '
     string.strip()
-    print(f'Question: {string}')
-    return result
+    qwest_num = f'{string}'
+    return qwest_num, result

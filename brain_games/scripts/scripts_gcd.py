@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 from brain_games.engine import run_game
-from brain_games.scripts.games.brain_gcd import gcd, qwest_gcd
+from brain_games.games.brain_gcd import gcd, QWEST_GCD
 
 
 def main():
-    run_game(qwest_gcd, gcd)
+    run_game(QWEST_GCD, gcd)
 
 
 if __name__ == '__main__':

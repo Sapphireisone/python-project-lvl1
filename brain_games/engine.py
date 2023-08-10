@@ -2,6 +2,9 @@
 import prompt
 
 
+ATTEMPT_RATE = 3
+
+
 def welcome_user():
     name = prompt.string('May I have your name? ')
     if name:
@@ -13,9 +16,10 @@ def run_game(qwest, func):
     print('Welcome to the Brain Games!')
     name = welcome_user()
     print(qwest)
-    i = 3
-    while i > 0:
-        result = func()
+    counter = ATTEMPT_RATE
+    while counter > 0:
+        qwest_num, result = func()
+        print(f'Question: {qwest_num}')
         answer = input('You answer: ')
         if str(answer) != str(result):
             print(f"""{answer} is wrong answer ;(. Correct answer was
@@ -23,6 +27,6 @@ def run_game(qwest, func):
             break
         else:
             print('Correct!')
-            i -= 1
-    if i == 0:
+            counter -= 1
+    if counter == 0:
         print(f'Congratulations, {name}!')

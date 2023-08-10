@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 from brain_games.engine import run_game
-from brain_games.scripts.games.brain_even import even, qwest_even
+from brain_games.games.brain_even import even, QWEST_EVEN
 
 
 def main():
-    run_game(qwest_even, even)
+    run_game(QWEST_EVEN, even)
 
 
 if __name__ == '__main__':
