@@ -7,9 +7,9 @@ DIAPASONE_TO = 99
 PROGRESSION_LENGTH = 10
 
 
-def make_list(elem, step, len):
+def make_list(elem, step, length):
     progression = [elem]
-    for el in range(1, len):
+    for el in range(1, length):
         elem += step
         progression.append(elem)
     return progression
