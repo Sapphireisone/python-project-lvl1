@@ -16,10 +16,10 @@ def run_game(qwest, func):
     print('Welcome to the Brain Games!')
     name = welcome_user()
     print(qwest)
-    counter = ATTEMPT_RATE
-    while counter > 0:
-        qwest_num, result = func()
-        print(f'Question: {qwest_num}')
+    count = 0
+    for i in range(ATTEMPT_RATE):
+        qwest_text, result = func()
+        print(f'Question: {qwest_text}')
         answer = input('You answer: ')
         if str(answer) != str(result):
             print(f"""{answer} is wrong answer ;(. Correct answer was
@@ -27,6 +27,6 @@ def run_game(qwest, func):
             break
         else:
             print('Correct!')
-            counter -= 1
-    if counter == 0:
-        print(f'Congratulations, {name}!')
+            count += 1
+            if count == ATTEMPT_RATE:
+                print(f'Congratulations, {name}!')

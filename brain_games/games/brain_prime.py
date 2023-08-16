@@ -1,28 +1,20 @@
 import random
 
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+DIAPASONE_FROM = 1
+DIAPASONE_TO = 99
 
-QWEST_PRIME = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-
-def prime():
-    num = random.randint(1, 99)
-    qwest_num = f'{num}'
-    result = ''
+def is_prime():
+    num = random.randint(DIAPASONE_FROM, DIAPASONE_TO)
+    qwest_text = f'{num}'
+    counter = 0
     if num == 1:
         result = 'no'
-    elif num == 2:
-        result = 'yes'
     else:
-        i = 2
-        res = 0
-        while i < num:
-            if num % i != 0:
-                i += 1
-            else:
-                res += 1
+        for i in range(2, num):
+            if num % i == 0:
+                counter += 1
                 break
-        if res > 0:
-            result = 'no'
-        else:
-            result = 'yes'
-    return qwest_num, result
+        result = 'no' if counter > 0 else 'yes'
+    return qwest_text, result

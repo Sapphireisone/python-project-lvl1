@@ -1,20 +1,26 @@
 import random
 
 
-QWEST_CALC = str('What is the result of the expression?')
+DESCRIPTION = str('What is the result of the expression?')
+DIAPASONE_FROM = 1
+DIAPASONE_TO = 99
 
 
-def calc():
-    letter = '+-*'
-    symbol = random.choices(letter)
-    symbol = symbol[0]
-    num1 = random.randint(1, 99)
-    num2 = random.randint(1, 99)
-    qwest_num = f'{num1} {symbol} {num2}'
+def count(x, y, symbol):
     if symbol == '+':
-        result = num1 + num2
+        result = x + y
     elif symbol == '-':
-        result = num1 - num2
+        result = x - y
     else:
-        result = num1 * num2
-    return qwest_num, result
+        result = x * y
+    return result
+
+
+def calculate():
+    variants_of_symbol = '+-*'
+    expression = random.choice(variants_of_symbol)
+    num_1 = random.randint(1, 99)
+    num_2 = random.randint(1, 99)
+    qwest_text = f'{num_1} {expression} {num_2}'
+    result = count(num_1, num_2, expression)
+    return qwest_text, result
