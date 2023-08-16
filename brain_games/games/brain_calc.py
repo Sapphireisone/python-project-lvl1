@@ -19,8 +19,8 @@ def count(x, y, symbol):
 def calculate():
     variants_of_symbol = '+-*'
     expression = random.choice(variants_of_symbol)
-    num_1 = random.randint(1, 99)
-    num_2 = random.randint(1, 99)
+    num_1 = random.randint(DIAPASONE_FROM, DIAPASONE_TO)
+    num_2 = random.randint(DIAPASONE_FROM, DIAPASONE_TO)
     qwest_text = f'{num_1} {expression} {num_2}'
     result = count(num_1, num_2, expression)
     return qwest_text, result
