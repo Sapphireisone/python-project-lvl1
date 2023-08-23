@@ -2,30 +2,25 @@ import random
 
 
 DESCRIPTION = str('What number is missing in the progression?')
-DIAPASONE_FROM = 1
-DIAPASONE_TO = 99
+NUMBER_LOW = 1
+NUMBER_MAX = 99
 PROGRESSION_LENGTH = 10
 
 
 def make_list(elem, step, length):
-    progression = [elem]
+    progression = [str(elem)]
     for el in range(1, length):
         elem += step
-        progression.append(elem)
+        progression.append(str(elem))
     return progression
 
 
-def find_progress():
-    first_element = random.randint(DIAPASONE_FROM, DIAPASONE_TO)
-    step = random.randint(DIAPASONE_FROM, DIAPASONE_TO)
+def get_question_and_answer():
+    first_element = random.randint(NUMBER_LOW, NUMBER_MAX)
+    step = random.randint(NUMBER_LOW, NUMBER_MAX)
     progression = make_list(first_element, step, PROGRESSION_LENGTH)
-    some = random.randint(0, 9)
-    result = progression[some]
+    some = random.randint(0, PROGRESSION_LENGTH)
+    result = int(progression[some])
     progression[some] = '..'
-    string = ''
-    for n in progression:
-        a = str(n)
-        string = string + a + ' '
-    string.strip()
-    qwest_text = f'{string}'
+    qwest_text = " ".join(progression)
     return qwest_text, result

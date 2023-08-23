@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Denis <allmediasale@icloud.com>"]
 readme = "README.md"
+repository = "https://github.com/Sapphireisone/python-project-lvl1/"
 packages = [
   { include = "brain_games" },
 ]

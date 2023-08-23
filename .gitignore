@@ -3,3 +3,4 @@
 .chat/
 dist/
 __pycache__
+brain_games/scripts/__pycache__

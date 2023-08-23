@@ -21,12 +21,12 @@ def run_game(qwest, func):
         qwest_text, result = func()
         print(f'Question: {qwest_text}')
         answer = input('You answer: ')
-        if str(answer) != str(result):
-            print(f"""{answer} is wrong answer ;(. Correct answer was
- {result}. Let's try again, {name}!""")
-            break
-        else:
+        if str(answer) == str(result):
             print('Correct!')
             count += 1
             if count == ATTEMPT_RATE:
                 print(f'Congratulations, {name}!')
+        else:
+            print(f"""{answer} is wrong answer ;(. Correct answer was
+ {result}. Let's try again, {name}!""")
+            break

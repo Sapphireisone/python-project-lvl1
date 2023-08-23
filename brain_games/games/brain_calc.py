@@ -2,25 +2,24 @@ import random
 
 
 DESCRIPTION = str('What is the result of the expression?')
-DIAPASONE_FROM = 1
-DIAPASONE_TO = 99
+NUMBER_LOW = 1
+NUMBER_MAX = 99
 
 
-def count(x, y, symbol):
+def calculate(x, y, symbol):
     if symbol == '+':
-        result = x + y
+        return x + y
     elif symbol == '-':
-        result = x - y
+        return x - y
     else:
-        result = x * y
-    return result
+        return x * y
 
 
-def calculate():
+def get_question_and_answer():
     variants_of_symbol = '+-*'
     expression = random.choice(variants_of_symbol)
-    num_1 = random.randint(DIAPASONE_FROM, DIAPASONE_TO)
-    num_2 = random.randint(DIAPASONE_FROM, DIAPASONE_TO)
+    num_1 = random.randint(NUMBER_LOW, NUMBER_MAX)
+    num_2 = random.randint(NUMBER_LOW, NUMBER_MAX)
     qwest_text = f'{num_1} {expression} {num_2}'
-    result = count(num_1, num_2, expression)
+    result = calculate(num_1, num_2, expression)
     return qwest_text, result
