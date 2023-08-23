@@ -6,7 +6,7 @@
 How to install?\
 Open terminal and execute the commands:
 
-git clone https://github.com/Sapphireisone/python-project-lvl1.git\
+git clone https://github.com/Sapphireisone/python-project-lvl1.git  
 python3 -m pip install --user dist/*.whl
 
 Use terminal commands:
