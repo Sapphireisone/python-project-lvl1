@@ -3,19 +3,19 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f941d14f358d61a78fcb/maintainability)](https://codeclimate.com/github/Sapphireisone/python-project-lvl1/maintainability)
 
-How to install?
+How to install?\
 Open terminal and execute the commands:
 
-git clone https://github.com/Sapphireisone/python-project-lvl1.git
+git clone https://github.com/Sapphireisone/python-project-lvl1.git\
 python3 -m pip install --user dist/*.whl
 
 Use terminal commands:
 
-brain-even - launch the game "Even number"
-brain-calc - launch the game "Brain calculator"
-brain-gcd - launch the game "Greatest common divisor"
-brain-progression - launch the game "Progression"
-brain-prime - launch the game "Prime number"
+brain-even - launch the game "Even number"\
+brain-calc - launch the game "Brain calculator"\
+brain-gcd - launch the game "Greatest common divisor"\
+brain-progression - launch the game "Progression"\
+brain-prime - launch the game "Prime number"\
 brain-games - for testing installation of package
 
 Asciinemas for games:
