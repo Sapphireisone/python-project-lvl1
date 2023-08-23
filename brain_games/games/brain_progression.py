@@ -19,8 +19,8 @@ def get_question_and_answer():
     first_element = random.randint(NUMBER_LOW, NUMBER_MAX)
     step = random.randint(NUMBER_LOW, NUMBER_MAX)
     progression = make_list(first_element, step, PROGRESSION_LENGTH)
-    some = random.randint(0, PROGRESSION_LENGTH)
-    result = int(progression[some])
+    some = random.randint(0, PROGRESSION_LENGTH - 1)
+    result = progression[some]
     progression[some] = '..'
     qwest_text = " ".join(progression)
     return qwest_text, result
