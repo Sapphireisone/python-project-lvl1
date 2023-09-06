@@ -8,6 +8,6 @@ NUMBER_MAX = 99
 
 def get_question_and_answer():
     num = random.randint(NUMBER_LOW, NUMBER_MAX)
-    qwest_text = f'{num}'
+    question = f'{num}'
     right_answer = 'yes' if num % 2 == 0 else 'no'
-    return qwest_text, right_answer
+    return question, right_answer

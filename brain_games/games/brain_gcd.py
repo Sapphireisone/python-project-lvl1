@@ -16,7 +16,7 @@ def gcd(num, num_1, num_2):
 def get_question_and_answer():
     num_1 = random.randint(NUMBER_LOW, NUMBER_MAX)
     num_2 = random.randint(NUMBER_LOW, NUMBER_MAX)
-    qwest_text = f'{num_1} {num_2}'
+    question = f'{num_1} {num_2}'
     num = min(num_2, num_1)
-    result = gcd(num, num_1, num_2)
-    return qwest_text, result
+    right_answer = gcd(num, num_1, num_2)
+    return question, right_answer

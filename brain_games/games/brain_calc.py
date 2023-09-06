@@ -20,6 +20,6 @@ def get_question_and_answer():
     expression = random.choice(variants_of_symbol)
     num_1 = random.randint(NUMBER_LOW, NUMBER_MAX)
     num_2 = random.randint(NUMBER_LOW, NUMBER_MAX)
-    qwest_text = f'{num_1} {expression} {num_2}'
-    result = calculate(num_1, num_2, expression)
-    return qwest_text, result
+    question = f'{num_1} {expression} {num_2}'
+    right_answer = calculate(num_1, num_2, expression)
+    return question, right_answer
